@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env awk -f
 
 # Print only lines that do not contain the word DEBUG.
 awk '!/DEBUG/' file

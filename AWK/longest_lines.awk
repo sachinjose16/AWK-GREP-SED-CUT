@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env awk -f
 # Print the length of the longest line and which line number it is.
 awk '
 {

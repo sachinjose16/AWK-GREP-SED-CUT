@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env awk -f
 
 # Number non-empty lines only (skip empty lines for numbering).
 

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env awk -f
 
 # Print lines where field count differs from the first line’s field count (detect malformed rows).
 

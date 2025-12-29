@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env awk -f
 # From a CSV with headers, print the header row and then only rows where the "status" column equals "active" (you must locate the index by header name).
 
 awk -F"," '

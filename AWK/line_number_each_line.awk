@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env awk -f
 
 #Print line numbers along with each line of a file.
 

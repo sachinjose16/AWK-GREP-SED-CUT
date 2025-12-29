@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env awk -f
 
 # Print only lines longer than 80 characters.
 

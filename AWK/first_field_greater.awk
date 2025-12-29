@@ -1,4 +1,4 @@
-#/bin/bash
+#!/usr/bin/env awk -f
 
 # Print lines where the first field is greater than 100.
 awk -F"," '{if ($1 > 100) print $1}' awk_exercises_data.csv

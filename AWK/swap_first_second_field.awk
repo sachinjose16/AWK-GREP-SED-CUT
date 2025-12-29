@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env awk -f
 
 # Swap the first and second fields of a space-separated file.
 

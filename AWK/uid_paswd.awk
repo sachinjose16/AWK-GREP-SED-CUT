@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env awk -f
 
 # On /etc/passwd, count how many users have UID < 1000.
 

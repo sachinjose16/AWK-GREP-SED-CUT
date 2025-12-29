@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env awk -f
 
 # Add a new column which is the product of columns 2 and 3.
 

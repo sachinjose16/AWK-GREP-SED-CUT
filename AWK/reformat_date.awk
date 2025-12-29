@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env awk -f
 ##Reformat a date column from YYYY-MM-DD to DD/MM/YYYY.
 
 awk -F"," 'BEGIN { OFS="," }

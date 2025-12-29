@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env awk -f
 # Split each line into words and count total word frequency in a text file (simple word count).
 
 awk '

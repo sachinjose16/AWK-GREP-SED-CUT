@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env awk -f
 
 # Count how many lines are in a file (without using wc).
 awk 'END{print NR}' awk_exercises_data.csv

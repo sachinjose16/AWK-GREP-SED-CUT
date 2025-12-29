@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env awk -f
 
 # On /etc/passwd, print only users whose shell is /bin/bash.
 

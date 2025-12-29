@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env awk -f
 # Print only lines where the third column equals the string "ERROR".
 
 awk -F"," '$3=="ERROR"{print $0}' awk_exercises_data.csv
