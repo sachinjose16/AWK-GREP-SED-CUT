@@ -1,14 +1,35 @@
 # E. Filters & Pipelines
 
+#From ps aux, show only lines where the command includes java.
 ps aux | grep -i '[j]ava'
+
+#From df -h, show only lines where disk usage is above 80%.
 df -h | awk 'NR==1 || ($5+0) > 80'
+
+#From netstat or ss, show only lines with LISTEN state.
 ss -lntp | grep -w LISTEN
-netstat -an | grep -w LISTEN
+
+#From /etc/passwd, show only lines for users whose shell is /bin/bash.
 grep -E '/bin/bash$' /etc/passwd
+
+#From a log, show only lines that occurred today (filter by date prefix).
 grep "^$(date +%F)" app.log
 grep "^$(date '+%b %e')" /var/log/system.log
+
+
+#Filter git log output to only show commits by a specific author.
 git log --author="John Doe" --oneline
+
+#From a CSV, show only lines containing the value ACTIVE in any column.
 grep -F "ACTIVE" file.csv
+
+#Remove comment lines (starting with # or ;) from a config file.
 grep -Ev '^[[:space:]]*[#;]' config.ini
+
+#Show lines that contain non-ASCII characters.
 grep -nP '[^\x00-\x7F]' file.txt
+
+#Chain grep commands: first filter ERROR, then from those, only ones containing timeout.
 grep -i "ERROR" app.log | grep -i "timeout"
+
+

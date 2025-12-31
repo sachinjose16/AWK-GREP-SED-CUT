@@ -1,12 +1,30 @@
 # C. Files, Recursion, Binary Awareness
-
+##Recursively search all .log files under a directory for ERROR.
 grep -R --include="*.log" "ERROR" /path/to/dir
+
+##Recursively search for TODO in a project, but ignore node_modules/.
 grep -R --exclude-dir="node_modules" "TODO" /path/to/project
+
+##Search for password in all files, but skip binary files.
 grep -R -I "password" /path/to/dir
+
+##Search for main() in only .c and .h files.
 grep -R --include="*.c" --include="*.h" "main()" /path/to/project
+
+##Search for class in all .java files and show filenames only (no matched content).
 grep -R -l --include="*.java" "class" /path/to/project
+
+##Search for HACK and show which files contain it, no duplicates.
 grep -R -l "HACK" /path/to/project
+
+##Search for a pattern in gzip-compressed logs using zgrep.
 zgrep -n "ERROR" /path/to/logs/*.gz
+r.
+##Find all files that have DOS-style line endings (\r\n) by detecting \r.
 grep -R -l $'\t' /path/to/dir
+
+##Find all files that contain a tab characte
 grep -R -l $'\r' /path/to/dir
+
+##Search for a pattern ignoring case and also displaying file names and line numbers.
 grep -R -H -n -i "pattern" /path/to/dir

@@ -1,12 +1,29 @@
 # A. Basics
-
+#Print all lines containing the word ERROR in a file.
 grep "ERROR" nginx_log.log
+
+#Print all lines not containing the word DEBUG.
 grep -v "DEBUG" nginx_log.log
-grep -i "ERROR" nginx_log.log
+
+#Make the search case-insensitive (match error, Error, ERROR, etc.).
+grep -i "ERROR" nginx.log
+
+#Search for a whole word fail (but not fails, failure, etc.).
 grep -w "fail" nginx.log
+#Search for lines containing either ERROR or WARN.
 grep -E "ERROR|WARN" nginx_log.log
+
+#Search for lines matching ERROR and show line numbers.
 grep -n "ERROR" nginx_log.log
+
+#Count how many lines contain timeout (simulate grep -c).
 grep -ic "timeout" nginx_log.log
+
+#Show only the matching part of the line (not the whole line).
 grep -io "timeout" nginx_log.log
+
+#Print all lines that start with INFO.
 grep -E "^INFO" sed_2.txt
+
+#Print all lines that end with .log.
 grep -E "\.log$" sed_2.txt

@@ -1,12 +1,31 @@
 # D. Context & Debugging
 
+##Print lines with ERROR plus 2 lines before and after as context.
 grep -n -C 2 "ERROR" app.log
+
+##Print lines with FAIL plus 5 lines after only.
 grep -n -A 5 "FAIL" app.log
+
+##Print lines with CRITICAL and highlight the match in color.
 grep --color=always -n "CRITICAL" app.log
+
+##Show only the names of files that do not contain a given string.
 grep -R -L "needle" /path/to/dir
+
+##From a log, show only entries with ERROR but suppress the filename in multi-file search.
 grep -R -n -h "ERROR" /path/to/logs/*.log
+
+##Show the total number of matches across all files (not per file).
 grep -R -o "pattern" /path/to/dir | wc -l
+
+##Show how many times foo appears in a single file (character-level, not line-level).
 grep -o "foo" file.txt | wc -l
+
+##Print all unique matched words that look like ID=[0-9]+ using grep + other tools.
 grep -oE 'ID=[0-9]+' app.log | sort -u
+
+##Search for lines that contain multiple different patterns at once (using -e).
 grep -E "ERROR" app.log | grep -E "Timeout"
+
+##Verify if a file contains only printable text using grep and a negated character class.
 grep -n '[^[:print:][:space:]]' file.txt
