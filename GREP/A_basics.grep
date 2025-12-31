@@ -1,0 +1,12 @@
+# A. Basics
+
+grep "ERROR" nginx_log.log
+grep -v "DEBUG" nginx_log.log
+grep -i "ERROR" nginx_log.log
+grep -w "fail" nginx.log
+grep -E "ERROR|WARN" nginx_log.log
+grep -n "ERROR" nginx_log.log
+grep -ic "timeout" nginx_log.log
+grep -io "timeout" nginx_log.log
+grep -E "^INFO" sed_2.txt
+grep -E "\.log$" sed_2.txt

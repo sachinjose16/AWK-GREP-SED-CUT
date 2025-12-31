@@ -1,0 +1,12 @@
+# D. Context & Debugging
+
+grep -n -C 2 "ERROR" app.log
+grep -n -A 5 "FAIL" app.log
+grep --color=always -n "CRITICAL" app.log
+grep -R -L "needle" /path/to/dir
+grep -R -n -h "ERROR" /path/to/logs/*.log
+grep -R -o "pattern" /path/to/dir | wc -l
+grep -o "foo" file.txt | wc -l
+grep -oE 'ID=[0-9]+' app.log | sort -u
+grep -E "ERROR" app.log | grep -E "Timeout"
+grep -n '[^[:print:][:space:]]' file.txt

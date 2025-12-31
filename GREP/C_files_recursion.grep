@@ -1,0 +1,12 @@
+# C. Files, Recursion, Binary Awareness
+
+grep -R --include="*.log" "ERROR" /path/to/dir
+grep -R --exclude-dir="node_modules" "TODO" /path/to/project
+grep -R -I "password" /path/to/dir
+grep -R --include="*.c" --include="*.h" "main()" /path/to/project
+grep -R -l --include="*.java" "class" /path/to/project
+grep -R -l "HACK" /path/to/project
+zgrep -n "ERROR" /path/to/logs/*.gz
+grep -R -l $'\t' /path/to/dir
+grep -R -l $'\r' /path/to/dir
+grep -R -H -n -i "pattern" /path/to/dir

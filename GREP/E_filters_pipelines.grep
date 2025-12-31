@@ -1,0 +1,14 @@
+# E. Filters & Pipelines
+
+ps aux | grep -i '[j]ava'
+df -h | awk 'NR==1 || ($5+0) > 80'
+ss -lntp | grep -w LISTEN
+netstat -an | grep -w LISTEN
+grep -E '/bin/bash$' /etc/passwd
+grep "^$(date +%F)" app.log
+grep "^$(date '+%b %e')" /var/log/system.log
+git log --author="John Doe" --oneline
+grep -F "ACTIVE" file.csv
+grep -Ev '^[[:space:]]*[#;]' config.ini
+grep -nP '[^\x00-\x7F]' file.txt
+grep -i "ERROR" app.log | grep -i "timeout"
